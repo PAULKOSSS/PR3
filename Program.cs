@@ -25,7 +25,7 @@ var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
 
-AuthEndpoints.MapAuth(app);
+AuthEndpoints.MapAuth(app, hasher);
 ClothesEndpoints.MapClothes(app);
 OrderEndpoints.MapOrders(app);
 
